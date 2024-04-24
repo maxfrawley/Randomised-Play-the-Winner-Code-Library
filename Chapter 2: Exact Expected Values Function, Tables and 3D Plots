@@ -1,4 +1,4 @@
-# Expected Expected Value of N_A(n)/n
+# Expected Expected Value of N_A(n)/n Function
 E_NA <- function(n, alpha, beta, p_A, p_B) {
   q_B <- 1 - p_B
   E_NA <- numeric(n)
@@ -24,6 +24,7 @@ for (i in 1:length(p_values)) {
   }
 }
 result_df <- as.data.frame(result_table)
+print(result_df)
 
 result_table2 <- matrix(NA, nrow = length(p_values), ncol = length(p_values))
 colnames(result_table2) <- p_values
@@ -35,6 +36,7 @@ for (i in 1:length(p_values)) {
   }
 }
 result_df2 <- as.data.frame(result_table2)
+print(result_df2)
 
 # 3D surface plots for 
 library(plotly)
